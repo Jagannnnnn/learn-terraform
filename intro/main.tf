@@ -42,9 +42,22 @@
 
   ### Variables from another files
 
-  # tfvars - normally loaded
+  # tfvars - normally loaded , meaning these files are loaded to command line by using -var-file option
+  # terraform apply -auto-approve -var-file=data.tfvars
 
   variable "input" {}
   output "input"{
     value = var.input
   }
+
+  # auto.tfvars - automatically these files are loaded
+  variable "class" {}
+  output "class" {
+    value = var.class
+  }
+
+  variable "trainer" {}
+  output "trainer" {
+    value = var.trainer
+  }
+
