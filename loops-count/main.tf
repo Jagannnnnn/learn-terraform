@@ -1,5 +1,5 @@
 resource "null_resource" "dummy" {
-    count = lenth(var.x)
+    count = length(var.x)
 }
 
 variable "x" {
