@@ -9,5 +9,5 @@ variable "content" {
 }
 
 resource "null_resource" "test" {
-  count = 0
+  count = var.content == null ? 0 : 1
 }
